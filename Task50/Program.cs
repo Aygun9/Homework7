@@ -40,12 +40,12 @@ int n = EnterNumber("Insert n:  ");
 int[,] matrix = CreateRandomArray(m, n, 1, 10);
 PrintArr(matrix);
 Console.WriteLine();
-int N = EnterNumber("insert N : ");
+int Element = EnterNumber("insert N : ");
 int i=0; 
 int j=0;
-if (N == matrix[i, j])
+if (Element == matrix[i, j])
                 {
-                    Console.WriteLine($"{N} => {i},{j}");
+                    Console.WriteLine($"{Element} => {i},{j}");
                 }
-                else Console.WriteLine($"{N} => element not found in array  ");
+                else Console.WriteLine($"{Element} => element not found in array  ");
 
