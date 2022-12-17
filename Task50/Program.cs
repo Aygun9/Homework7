@@ -35,17 +35,28 @@ void PrintArr(int[,] array)
 }
 
 
-int m = EnterNumber("Insert m:  ");
-int n = EnterNumber("Insert n:  ");
-int[,] matrix = CreateRandomArray(m, n, 1, 10);
+void FindElement(int[,] matrix, int N)    // N-element of array
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (N == matrix[i, j])
+            {
+                Console.WriteLine($"{N} => {i},{j}");
+            }
+            else
+            {
+                Console.WriteLine($"{N} => element not found in array  ");
+            }
+        }
+
+    }
+}
+
+
+int[,] matrix = CreateRandomArray(3, 4, 1, 10);
 PrintArr(matrix);
 Console.WriteLine();
-int Element = EnterNumber("insert N : ");
-int i=0; 
-int j=0;
-if (Element == matrix[i, j])
-                {
-                    Console.WriteLine($"{Element} => {i},{j}");
-                }
-                else Console.WriteLine($"{Element} => element not found in array  ");
-
+int N = EnterNumber("Insert element of array");
+FindElement(matrix,N);
